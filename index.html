@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Food Order</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍴 Restaurant Food Order Form</h1>
+    <p>Select your meal preferences and place an order.</p>
+
+    <form id="orderForm">
+      <!-- Name & Contact -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required>
+
+      <!-- Veg / Non-veg -->
+      <label>Meal Preference:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="mealType" value="veg" checked> Veg</label>
+        <label><input type="radio" name="mealType" value="nonveg"> Non-Veg</label>
+      </div>
+
+      <!-- Menu Options -->
+      <div id="menuOptions"></div>
+
+      <!-- Quantity -->
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1" required>
+
+      <!-- Special Instructions -->
+      <label for="instructions">Special Instructions:</label>
+      <textarea id="instructions" rows="3" placeholder="e.g. Less spicy, extra cheese"></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div id="orderSummary" class="summary hidden">
+      <h2>✅ Order Summary</h2>
+      <p id="summaryText"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
